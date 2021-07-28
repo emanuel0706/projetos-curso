@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+
+<input/>
+<button>TENTE ACERTAR A RESPOSTA!!!<button/>
+
+
+
+<script>
+
+var resposta = Math.round(Math.random() * 10);
+
+var input = document.querySelector("input");
+
+function verifica(){
+	if(input.value == resposta){ 
+		alert("PARABÉNS, VOCÊ ACERTOU!!!");
+	} else{
+		alert("VOCÊ ERROU!!!!");
+	}
+	input.value = "";
+	input.focus();
+}
+
+var button = document.querySelector("button");
+input.focus();
+button.onclick = verifica;
+
+
+</script>	
